@@ -4,21 +4,25 @@ ini_set('display_errors', 1);
 
 try
 {
-	//Connecting to MySQL
-	$pdo = new PDO(
-		'mysql:host=localhost;dbname=pokédex;charset=utf8',
-		'phpmyadmin', 
-		'mypassword');
+    // Connecting to MySQL
+    $pdo = new PDO(
+        'mysql:host=localhost;dbname=pokédex;charset=utf8',
+        'toms', 
+        'root');
     $query = 'SELECT * FROM pokémon';
     $pokemons = $pdo->query($query)->fetchAll(PDO::FETCH_ASSOC);
     
-    // Display all table - used to debug
+    // Display the entire table - used for debugging
     echo '<pre>';
     print_r($pokemons);
     echo '</pre>';
+
+    foreach ($pokemons as $pokemon) {
+        echo '<a href="/pokemon?name=' . urlencode($pokemon['nom']) . '">' . htmlspecialchars($pokemon['nom']) . '</a><br>';
+    }
 }
 catch(Exception $e)
 {
-    // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
+    // In case of error, display a message and stop everything
+    die('Error : '.$e->getMessage());
 }
