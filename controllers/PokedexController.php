@@ -1,5 +1,7 @@
 <?php 
 
+require_once __DIR__.'/../models/PokemonModel.php';
+
 function index()
 {
     $user = [

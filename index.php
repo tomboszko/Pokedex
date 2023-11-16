@@ -4,7 +4,7 @@
 // Include the helper file for handling requests
 require_once __DIR__.'/helpers/request.php';
 
-// Switch statement to handle different routes based on the path from the URL
+// Switch statement to hndle different routes based on the path from the URL
 switch($url['path'])
 {
     // Case: Root path '/'
@@ -45,3 +45,5 @@ switch($url['path'])
         http_response_code(404);
         break;
 }
+
+?>
