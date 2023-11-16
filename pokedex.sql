@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 16 nov. 2023 à 11:30
+-- Généré le : jeu. 16 nov. 2023 à 14:51
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `pokémon` (
   `type1` varchar(255) NOT NULL,
   `type2` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=404 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `pokémon`
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `stats` (
   `spec_attack` smallint NOT NULL,
   `speed` smallint NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=177 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `stats`
@@ -188,7 +188,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(20) NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `user`, `password`, `admin`) VALUES
+(1, 'kevin123', 'pikachu', 0),
+(2, 'tomadmin', 'admin', 1),
+(3, 'alexadmin', 'admin', 1),
+(4, 'virginieadmin', 'admin', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
