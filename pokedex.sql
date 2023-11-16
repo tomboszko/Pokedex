@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 16 nov. 2023 à 11:08
+-- Généré le : jeu. 16 nov. 2023 à 11:30
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -29,9 +29,31 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `evolution`;
 CREATE TABLE IF NOT EXISTS `evolution` (
-  `id` smallint NOT NULL,
-  `id_evolve` smallint NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `number` smallint NOT NULL,
+  `number_evolve` smallint NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `evolution`
+--
+
+INSERT INTO `evolution` (`id`, `number`, `number_evolve`) VALUES
+(1, 1, 2),
+(2, 2, 3),
+(3, 4, 5),
+(4, 5, 6),
+(5, 7, 8),
+(6, 8, 9),
+(7, 133, 134),
+(8, 133, 135),
+(9, 133, 136),
+(10, 133, 196),
+(11, 133, 197),
+(12, 133, 470),
+(13, 133, 471),
+(14, 133, 700);
 
 -- --------------------------------------------------------
 
@@ -164,6 +186,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 COMMIT;
