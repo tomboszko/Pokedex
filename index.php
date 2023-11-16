@@ -8,7 +8,7 @@ require_once __DIR__.'/helpers/request.php';
 switch($url['path'])
 {
     // Case: Root path '/'
-    case '/':
+    case '/Pokedex/':
         // Check if the HTTP method is GET
         if($method == 'GET') {
             // Include the 'views/index.php' file for the root path
@@ -18,7 +18,7 @@ switch($url['path'])
         break;
 
     // Case: Handle other paths
-    case '/pokemon':
+    case '/pokemon/':
         // Check if the HTTP method is GET
         if($method == 'GET') {
             // Parse the query string of the URL and store the result in the 'result' array

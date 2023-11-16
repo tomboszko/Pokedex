@@ -18,5 +18,6 @@ $result = [];
 // Get the current request URL and parse it using the 'url' function
 $url = url($_SERVER['REQUEST_URI']);
 
+
 // Get the request method (e.g., GET, POST) from the server environment
 $method = $_SERVER['REQUEST_METHOD'];
