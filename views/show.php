@@ -6,7 +6,7 @@
 
     <!-- Display Pokémon stats -->
     <p>Number: <?= isset($pokemon[0]['number']) ? htmlspecialchars($pokemon[0]['number']) : 'N/A' ?></p>
-
+<!-- Display evolution -->
     <p>Evolutions:</p>
     <ul>
     <?php foreach ($pokemon as $p): ?>
@@ -18,7 +18,7 @@
         </li>
     <?php endforeach; ?>
     </ul>
-
+<!-- Display STATS -->
     <p>HP: <?= isset($pokemon[0]['hp']) ? htmlspecialchars($pokemon[0]['hp']) : 'N/A' ?></p>
     <p>Attack: <?= isset($pokemon[0]['attack']) ? htmlspecialchars($pokemon[0]['attack']) : 'N/A' ?></p>
     <p>Defense: <?= isset($pokemon[0]['defense']) ? htmlspecialchars($pokemon[0]['defense']) : 'N/A' ?></p>
