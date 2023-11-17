@@ -1,11 +1,13 @@
 <?php
+session_start();
+
 $title = "Home";
 require_once __DIR__ . '/partials/header.php';
 ?>
 
 <main>
     <h1>Pokedex - Homepage</h1>
-    <p>Hello <strong><?php echo $user['name'] ?></p></strong>
+    <p>Hello <strong><?php echo $_SESSION['user']['user']  ?></p></strong>
     <div>
         <?php foreach ($pokemons as $key => $pokemon) { ?>
             <div>
