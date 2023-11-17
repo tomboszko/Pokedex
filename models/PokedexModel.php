@@ -7,8 +7,8 @@ try
 	//Connecting to MySQL
 	$pdo = new PDO(
 		'mysql:host=localhost;dbname=pokédex;charset=utf8',
-		'phpmyadmin', 
-		'mypassword');
+		'root', 
+		'');
     $query = 'SELECT * FROM pokémon';
     $pokemons = $pdo->query($query)->fetchAll(PDO::FETCH_ASSOC);
     $query = 'SELECT * FROM type';

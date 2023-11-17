@@ -19,6 +19,14 @@ switch ($url['path']) {
             index();
         }
         break;
+    case '/Pokedex/login':
+    if ($method == 'POST') {
+        require 'controllers/AuthController.php';
+        login();
+    } elseif ($method == 'GET') {
+        require 'views/login_form.php';
+    }
+    break;
 
         // Case: Handle other paths
     case '/Pokedex/index.php/pokemon':
