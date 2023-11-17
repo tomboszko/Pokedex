@@ -14,7 +14,7 @@ require_once __DIR__ . '/partials/header.php';
                 <div><?= $pokemon['nom']?></div>
                 <div>
                     <div><?= $pokemons[$key]['type1']?></div>
-                    <div><?= $pokemons[$key]['type2']?></div>
+                    <div><?= $pokemons[$key]['type2'] != 'NULL' ? $pokemons[$key]['type2'] : '' ?></div>
                 </div>
             </div>
         <?php } ?>
