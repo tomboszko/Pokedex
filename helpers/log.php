@@ -1,3 +1,3 @@
 <?php
-$login = 'root';
-$password = '';
+$login = 'phpmyadmin';
+$password = 'mypassword';

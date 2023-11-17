@@ -13,8 +13,8 @@ require_once __DIR__ . '/partials/header.php';
                 <div><?= $pokemon['number'] ?></div>
                 <div><?= $pokemon['nom']?></div>
                 <div>
-                    <div><?= $pokemons[$key]['type1']?></div>
-                    <div><?= $pokemons[$key]['type2'] != 'NULL' ? $pokemons[$key]['type2'] : '' ?></div>
+                    <div><img src="public/img/types/<?= $pokemons[$key]['type1']?>.png" alt="type en couleur"></div>
+                    <div><?php if ($pokemons[$key]['type2'] != 'NULL') : ?><img src="public/img/types/<?= $pokemons[$key]['type2']?>.png" alt="type en couleur"><?php else  : echo ''; endif ?></div>
                 </div>
             </div>
         <?php } ?>
