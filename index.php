@@ -6,6 +6,10 @@ ini_set('display_errors', 1);
 // Include the helper file for handling requests
 require_once __DIR__ . '/helpers/request.php';
 require_once __DIR__ . '/helpers/functions.php';
+require_once __DIR__ . '/helpers/connectPDO.php';
+
+    
+
 
 // Switch statement to handle different routes based on the path from the URL
 
@@ -16,7 +20,7 @@ switch ($url['path']) {
         if ($method == 'GET') {
             // Include the 'views/index.php' file for the root path
             require 'controllers/PokedexController.php';
-            index();
+            index($pdo);
         }
         break;
 
