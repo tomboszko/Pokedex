@@ -2,7 +2,7 @@
 include 'models/displayPokemonModel.php';
 
 // Initialize or include the database connection here
-// Assuming $db is a PDO object
+
 
 function show($name, $db) {
     $pokemon = getPokemonByName($db, $name);

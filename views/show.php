@@ -2,7 +2,7 @@
     <h1><?= htmlspecialchars($pokemon['nom']) ?></h1>
 
     <!-- Display Pokémon image -->
-    <img src="../public/img/pokemon/<?= urlencode($pokemon['nom']) ?>.png" wide="200" height="200" alt="<?= htmlspecialchars($pokemon['nom']) ?>">
+    <img src="../public/img/pokemon/<?= urlencode($pokemon['nom']) ?>.png" alt="<?= htmlspecialchars($pokemon['nom']) ?>">
     <!-- Display Pokémon stats -->
     <p>Number: <?= isset($pokemon['number']) ? htmlspecialchars($pokemon['number']) : 'N/A' ?></p>
     <p>HP: <?= isset($pokemon['hp']) ? htmlspecialchars($pokemon['hp']) : 'N/A' ?></p>
