@@ -10,7 +10,12 @@
     <p>Evolutions:</p>
     <ul>
     <?php foreach ($pokemon as $p): ?>
-        <li><?= isset($p['evolution']) ? htmlspecialchars($p['evolution']) : 'No evolution' ?></li>
+        <li>
+            <?= isset($p['evolution']) ? htmlspecialchars($p['evolution']) : 'No evolution' ?>
+            <?php if (isset($p['evolution'])): ?>
+                <img src="../public/img/pokemon/<?= urlencode($p['evolution']) ?>.png" wide="50" height="50" alt="<?= htmlspecialchars($p['evolution']) ?>">
+            <?php endif; ?>
+        </li>
     <?php endforeach; ?>
     </ul>
 
