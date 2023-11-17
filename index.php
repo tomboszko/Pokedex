@@ -23,13 +23,14 @@ switch ($url['path']) {
             index($pdo);
         }
         break;
-    case '/Pokedex/login':
+    case '/Pokedex/index.php/login':
     if ($method == 'POST') {
         require 'controllers/AuthController.php';
-        login();
-    } elseif ($method == 'GET') {
-        require 'views/login_form.php';
-    }
+        login($pdo);
+    } 
+    //elseif ($method == 'GET') {
+    //    require 'views/login_form.php';
+    //}
     break;
 
         // Case: Handle other paths

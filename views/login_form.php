@@ -11,7 +11,14 @@
 
     <h2>Formulaire de Connexion</h2>
 
-    <form method="POST" action="/Pokedex/login">
+    <?php
+    // Display an error message if the error parameter is set
+    if (isset($_GET['error']) && $_GET['error'] == 1) {
+        echo '<p style="color: red;">Invalid username or password.</p>';
+    }
+    ?>
+
+    <form method="POST" action="/Pokedex/index.php/login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username">
 
@@ -23,4 +30,5 @@
 
 </body>
 </html>
+
 
