@@ -7,6 +7,10 @@ error_reporting(E_ALL);
 // Include helper files for handling requests and other functions
 require_once __DIR__ . '/helpers/request.php';
 require_once __DIR__ . '/helpers/functions.php';
+require_once __DIR__ . '/helpers/connectPDO.php';
+
+    
+
 
 // Parse the URL and the query string
 $url = parse_url($_SERVER['REQUEST_URI']);
@@ -23,7 +27,7 @@ switch ($url['path']) {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             // Include the PokedexController and call the index function
             require 'controllers/PokedexController.php';
-            index();
+            index($pdo);
         }
         break;
 
