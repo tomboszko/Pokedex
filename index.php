@@ -31,7 +31,7 @@ switch ($url['path']) {
         }
         break;
 
-    // Case: Handle other paths
+// Case: Handle other paths
 case '/Pokedex/index.php/pokemon':
     // Check if the HTTP method is GET
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -39,7 +39,7 @@ case '/Pokedex/index.php/pokemon':
         if (isset($params['name']) && !empty($params['name'])) {
             // If 'name' parameter is set, include the PokemonController and call the show function
             require 'controllers/displayPokemonController.php';
-            show($params['name']);
+            show($params['name'], $db);
         } else {
             // If 'name' parameter is not set, include the 404 error page
             require 'views/errors/404.php';
