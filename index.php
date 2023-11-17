@@ -32,22 +32,22 @@ switch ($url['path']) {
         break;
 
     // Case: Handle other paths
-    case '/Pokedex/index.php/pokemon':
-        // Check if the HTTP method is GET
-        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            // Check if the 'name' parameter is set in the query string
-            if (isset($params['name']) && !empty($params['name'])) {
-                // If 'name' parameter is set, include the PokemonController and call the show function
-                require 'controllers/PokemonController.php';
-                show($params['name']);
-            } else {
-                // If 'name' parameter is not set, include the 404 error page
-                require 'views/errors/404.php';
-                // Set HTTP response code to 404 Not Found
-                http_response_code(404);
-            }
+case '/Pokedex/index.php/pokemon':
+    // Check if the HTTP method is GET
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        // Check if the 'name' parameter is set in the query string
+        if (isset($params['name']) && !empty($params['name'])) {
+            // If 'name' parameter is set, include the PokemonController and call the show function
+            require 'controllers/displayPokemonController.php';
+            show($params['name']);
+        } else {
+            // If 'name' parameter is not set, include the 404 error page
+            require 'views/errors/404.php';
+            // Set HTTP response code to 404 Not Found
+            http_response_code(404);
         }
-        break;
+    }
+    break;
 
     // Default case: Handle all other paths
     default:

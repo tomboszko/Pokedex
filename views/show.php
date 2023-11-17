@@ -1,4 +1,4 @@
-<h1><?php echo htmlspecialchars($pokemon['name']); ?></h1>
+<h1><?php echo htmlspecialchars($pokemon['nom']); ?></h1>
 
 <!-- Display Pokémon stats -->
 <p>HP: <?php echo $pokemon['hp']; ?></p>

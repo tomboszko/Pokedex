@@ -1,15 +1,9 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=pokedex;charset=utf8', 'toms', 'root');
 
-function getPokemonByName($db, $name)
-{
-    $stmt = $db->prepare("
-        SELECT p.*, s.*
-        FROM `pokemon` p
-        LEFT JOIN `stats` s ON p.id = s.pokemon_id
-        WHERE p.`name` = :name
-    ");
-    $stmt->bindParam(':name', $name);
-    $stmt->execute();
+require_once 'helpers/log.php';
+$db = new PDO('mysql:host=localhost;dbname=pokédex;charset=utf8', $login, $password);
+function getPokemonByName($db, $name) {
+    $stmt = $db->prepare('SELECT * FROM pokémon WHERE nom = :nom');
+    $stmt->execute(['nom' => $name]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
