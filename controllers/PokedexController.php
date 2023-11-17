@@ -1,12 +1,11 @@
 <?php 
 
-function index()
+function index($pdo)
 {
     $user = [
         'name' => 'John Doe',
         'email' => 'johndoe@email.com'
     ];
-
     require_once __DIR__.'/../models/PokedexModel.php';
 
     foreach($pokemons as $i => $pokemon) {
