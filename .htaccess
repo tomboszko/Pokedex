@@ -1,0 +1,7 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteBase /Pokedex/    # Set the base URL for the rewrite rules
+
+# Redirect all requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

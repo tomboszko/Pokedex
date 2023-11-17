@@ -21,9 +21,17 @@ require_once __DIR__ . '/partials/header.php';
     <div>
         <?php foreach ($pokemons as $key => $pokemon) { ?>
             <div>
-                <div><img src="<?= "public/img/pokemon/{$pokemon['nom']}.png"?>" alt="image of the pokemon"></div>
+                <div>
+                    <a href="/Pokedex/index.php/pokemon?name=<?= $pokemon['nom'] ?>">
+                        <img src="<?= "public/img/pokemon/{$pokemon['nom']}.png"?>" alt="image of the pokemon">
+                    </a>
+                </div>
                 <div><?= $pokemon['number'] ?></div>
-                <div><?= $pokemon['nom']?></div>
+                <div>
+                    <a href="/Pokedex/index.php/pokemon?name=<?= $pokemon['nom'] ?>">
+                        <?= $pokemon['nom']?>
+                    </a>
+                </div>
                 <div>
                     <div><img src="public/img/types/<?= $pokemons[$key]['type1']?>.png" alt="type en couleur"></div>
                     <div><?php if ($pokemons[$key]['type2'] != 'NULL') : ?><img src="public/img/types/<?= $pokemons[$key]['type2']?>.png" alt="type en couleur"><?php else  : echo ''; endif ?></div>
@@ -31,7 +39,6 @@ require_once __DIR__ . '/partials/header.php';
             </div>
         <?php } ?>
     </div>
-    <a href="/Pokedex/index.php/pokemon?name=pickachu">Pikachu</a>
 </main>
 
 <?php
