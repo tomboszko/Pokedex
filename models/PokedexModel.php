@@ -15,13 +15,13 @@ try
     $types = $pdo->query($query)->fetchAll(PDO::FETCH_ASSOC);
     
     // Display all table - used to debug
-    echo '<pre>';
-    print_r($types);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($types);
+    // echo '</pre>';
 
-    echo '<pre>';
-    print_r($pokemons);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($pokemons);
+    // echo '</pre>';
 }
 catch(Exception $e)
 {
