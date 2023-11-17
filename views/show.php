@@ -1,17 +1,25 @@
-<?php if (isset($pokemon) && $pokemon): ?>
-    <h1><?= htmlspecialchars($pokemon['nom']) ?></h1>
+<?php if (isset($pokemon) && $pokemon && isset($pokemon[0]['nom'])): ?>
+    <h1><?= htmlspecialchars($pokemon[0]['nom']) ?></h1>
 
     <!-- Display Pokémon image -->
-    <img src="../public/img/pokemon/<?= urlencode($pokemon['nom']) ?>.png" alt="<?= htmlspecialchars($pokemon['nom']) ?>">
+    <img src="../public/img/pokemon/<?= urlencode($pokemon[0]['nom']) ?>.png" alt="<?= htmlspecialchars($pokemon[0]['nom']) ?>">
+
     <!-- Display Pokémon stats -->
-    <p>Number: <?= isset($pokemon['number']) ? htmlspecialchars($pokemon['number']) : 'N/A' ?></p>
-    <p>Evolution: <?= isset($pokemon['evolution']) ? htmlspecialchars($pokemon['evolution']) : 'N/A' ?></p>
-    <p>HP: <?= isset($pokemon['hp']) ? htmlspecialchars($pokemon['hp']) : 'N/A' ?></p>
-    <p>Attack: <?= isset($pokemon['attack']) ? htmlspecialchars($pokemon['attack']) : 'N/A' ?></p>
-    <p>Defense: <?= isset($pokemon['defense']) ? htmlspecialchars($pokemon['defense']) : 'N/A' ?></p>
-    <p>Special Defense: <?= isset($pokemon['spec_defense']) ? htmlspecialchars($pokemon['spec_defense']) : 'N/A' ?></p>
-    <p>Special Attack: <?= isset($pokemon['spec_attack']) ? htmlspecialchars($pokemon['spec_attack']) : 'N/A' ?></p>
-    <p>Speed: <?= isset($pokemon['speed']) ? htmlspecialchars($pokemon['speed']) : 'N/A' ?></p>
+    <p>Number: <?= isset($pokemon[0]['number']) ? htmlspecialchars($pokemon[0]['number']) : 'N/A' ?></p>
+
+    <p>Evolutions:</p>
+    <ul>
+    <?php foreach ($pokemon as $p): ?>
+        <li><?= isset($p['evolution']) ? htmlspecialchars($p['evolution']) : 'No evolution' ?></li>
+    <?php endforeach; ?>
+    </ul>
+
+    <p>HP: <?= isset($pokemon[0]['hp']) ? htmlspecialchars($pokemon[0]['hp']) : 'N/A' ?></p>
+    <p>Attack: <?= isset($pokemon[0]['attack']) ? htmlspecialchars($pokemon[0]['attack']) : 'N/A' ?></p>
+    <p>Defense: <?= isset($pokemon[0]['defense']) ? htmlspecialchars($pokemon[0]['defense']) : 'N/A' ?></p>
+    <p>Special Defense: <?= isset($pokemon[0]['spec_defense']) ? htmlspecialchars($pokemon[0]['spec_defense']) : 'N/A' ?></p>
+    <p>Special Attack: <?= isset($pokemon[0]['spec_attack']) ? htmlspecialchars($pokemon[0]['spec_attack']) : 'N/A' ?></p>
+    <p>Speed: <?= isset($pokemon[0]['speed']) ? htmlspecialchars($pokemon[0]['speed']) : 'N/A' ?></p>
 
     <a href="/">Back to list</a>
 <?php else: ?>
