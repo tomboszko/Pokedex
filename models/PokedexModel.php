@@ -15,13 +15,13 @@ try
     $types = $pdo->query($query)->fetchAll(PDO::FETCH_ASSOC);
     
     // Display the entire table - used for debugging
-    echo '<pre>';
-    print_r($types);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($types);
+    // echo '</pre>';
 
-    echo '<pre>';
-    print_r($pokemons);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($pokemons);
+    // echo '</pre>';
 
     foreach ($pokemons as $pokemon) {
         echo '<a href="/pokemon?name=' . urlencode($pokemon['nom']) . '">' . htmlspecialchars($pokemon['nom']) . '</a><br>';

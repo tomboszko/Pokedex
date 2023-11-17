@@ -1,5 +1,4 @@
 <?php 
-// Ensure you have a valid PDO instance here
 $db = new PDO('mysql:host=localhost;dbname=pokédex;charset=utf8', 'toms', 'root');
 
 function getPokemonByName($db, $name)
@@ -21,7 +20,10 @@ $pokemon = getPokemonByName($db, $name);
 
 <h1><?php echo htmlspecialchars($pokemon['name']); ?></h1>
 
-<!-- Display other Pokémon information here... -->
+<!-- Display Pokémon stats -->
+<p>HP: <?php echo $pokemon['hp']; ?></p>
+<p>Attack: <?php echo $pokemon['attack']; ?></p>
+<p>Defense: <?php echo $pokemon['defense']; ?></p>
+<!-- Add more stats as needed... -->
 
 <a href="/">Back to list</a>
-	
