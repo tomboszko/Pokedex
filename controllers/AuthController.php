@@ -17,11 +17,11 @@ function login($pdo) {
     if ($user && $password == $user['password']) {
         // The user is authenticated, store their information in the session
         $_SESSION['user'] = $user;
-        header('Location: /Pokedex/'); // Redirect to the root path after successful login
+        header('Location:/Pokedex/'); // Redirect to the root path after successful login
         exit;
     } else {
         // The authentication failed
-        header('Location: /Pokedex/index.php/login?error=1'); // Redirect with an error parameter
+        header('Location:/Pokedex/index.php/login?error=1'); // Redirect with an error parameter
         exit;
     }
 }

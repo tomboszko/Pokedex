@@ -9,9 +9,6 @@ require_once __DIR__ . '/helpers/request.php';
 require_once __DIR__ . '/helpers/functions.php';
 require_once __DIR__ . '/helpers/connectPDO.php';
 
-    
-
-
 // Parse the URL and the query string
 $url = parse_url($_SERVER['REQUEST_URI']);
 $params = [];
@@ -44,7 +41,7 @@ switch ($url['path']) {
         if ($method == 'POST') {
             // Include the 'controllers/RegisterController.php' file for the registration form
             require 'controllers/RegisterController.php';
-            register($pdo);
+            registerOtherName($pdo);
         }
         elseif ($method == 'GET') {
             require 'views/registration_form.php';
