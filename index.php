@@ -35,10 +35,18 @@ switch ($url['path']) {
         require 'controllers/AuthController.php';
         login($pdo);
     } 
-    //elseif ($method == 'GET') {
-    //    require 'views/login_form.php';
-    //}
+    elseif ($method == 'GET') {
+        require 'views/login_form.php';
+    }
     break;
+    case '/Pokedex/index.php/register':
+        // Check if the HTTP method is GET
+        if ($method == 'GET') {
+            // Include the 'controllers/RegisterController.php' file for the registration form
+            require 'controllers/RegisterController.php';
+            register($pdo);
+        }
+        break;
 
 // Case: Handle other paths
 case '/Pokedex/index.php/pokemon':
