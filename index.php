@@ -41,10 +41,13 @@ switch ($url['path']) {
     break;
     case '/Pokedex/index.php/register':
         // Check if the HTTP method is GET
-        if ($method == 'GET') {
+        if ($method == 'POST') {
             // Include the 'controllers/RegisterController.php' file for the registration form
             require 'controllers/RegisterController.php';
             register($pdo);
+        }
+        elseif ($method == 'GET') {
+            require 'views/registration_form.php';
         }
         break;
 
