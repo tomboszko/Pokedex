@@ -13,6 +13,7 @@
             <a class="" href="/Pokedex/">Pokemon</a>
             <a href="/Pokedex/index.php/login">My account</a>
             <a href="/Pokedex/index.php/register">Register</a>
+            <a href="/Pokedex/index.php/addpokemon">Add Pokémon</a>
         </nav>
     </header>
     
