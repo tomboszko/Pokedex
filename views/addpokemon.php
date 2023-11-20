@@ -11,11 +11,11 @@ require __DIR__ . '/partials/header.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
 </head>
-<body class="bg-gray-100 p-8">
+<body class="bg-gray-100 p-8 flex flex-col items-center">
 
     <h2 class="text-2xl font-bold mb-4">Add Pokémon :</h2>
 
-    <form class="max-w-md bg-white p-6 rounded-md shadow-md" method="POST" action="/Pokedex/index.php/addpokemon">
+    <form class=" w-2/3 bg-white p-6 rounded-md shadow-md" method="POST" action="/Pokedex/index.php/addpokemon">
         <h3 class="text-lg font-semibold mb-2">Pokémon Information:</h3>
         <label for="number" class="block mb-2">Number of pokémon :</label>
         <input type="text" name="number" id="number" class="w-full border p-2 mb-2" required>
