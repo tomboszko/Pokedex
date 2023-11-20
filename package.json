@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch" : "npx tailwindcss -i ./public/css/styles.css -o ./dist/style.css --watch"
+    "watch": "npx tailwindcss -i ./public/css/styles.css -o ./dist/style.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "node": "^21.1.0"
   }
 }
