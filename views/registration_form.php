@@ -16,16 +16,16 @@ require __DIR__ . '/partials/header.php';
 </head>
 <body>
 
-    <h2>Add Pokémon</h2>
+    <h2 class="text-4xl text-center m-10">Add Pokémon</h2>
 
-<form method="POST" action="/Pokedex/index.php/register">
+<form class="flex flex-col items-center gap-4" method="POST" action="/Pokedex/index.php/register">
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <input class="bg-slate-300 px-2 py-1" type="text" id="username" name="username" required>
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input class="bg-slate-300 px-2 py-1" type="password" id="password" name="password" required>
 
-    <input type="submit" value="Register">
+    <input class="bg-slate-300 px-2 py-1" type="submit" value="Register">
 </form>
 
 <?php

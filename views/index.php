@@ -8,7 +8,7 @@ require __DIR__ . '/partials/header.php';
 ?>
 
 <main class="w-full">
-    <h1>Pokedex - Homepage</h1>
+    <h1 class="text-4xl text-center p-6">Pokedex</h1>
     <div class="flex flex-wrap gap-8 justify-center p-10">
         <?php foreach ($pokemons as $key => $pokemon) { ?>
             <div class="flex gap-2 flex-col items-center border-2 w-1/6 p-6">
