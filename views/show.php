@@ -12,7 +12,7 @@
     <?php foreach ($pokemon as $p): ?>
         <li>
             <?php if (isset($p['evolution'])): ?>
-                <a href="show.php?name=<?= urlencode($p['evolution']) ?>">
+                <a href="pokedex/show.php?name=<?= urlencode($p['evolution']) ?>">
                     <?= htmlspecialchars($p['evolution']) ?>
                     <img src="../public/img/pokemon/<?= urlencode($p['evolution']) ?>.png" width="50" height="50" alt="<?= htmlspecialchars($p['evolution']) ?>">
                 </a>
