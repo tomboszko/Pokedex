@@ -1,6 +1,8 @@
 <?php 
+session_start();
 // Include the header file
 require __DIR__ . '/partials/header.php';
+
 if (isset($pokemon) && $pokemon && isset($pokemon[0]['nom'])): ?>
     <h1><?= htmlspecialchars($pokemon[0]['nom']) ?></h1>
 
