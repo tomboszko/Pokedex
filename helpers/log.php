@@ -1,3 +1,3 @@
 <?php
-$login = 'root';
-$password = '';
+$login = 'toms';
+$password = 'root';

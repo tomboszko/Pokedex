@@ -6,7 +6,7 @@
 
     <!-- Display Pokémon stats -->
     <p>Number: <?= isset($pokemon[0]['number']) ? htmlspecialchars($pokemon[0]['number']) : 'N/A' ?></p>
-<!-- Display evolution -->
+    <!-- Display evolution -->
     <p>Evolutions:</p>
     <ul>
         <?php foreach ($pokemon as $p): ?>
@@ -14,7 +14,7 @@
                 <?php if (isset($p['evolution'])): ?>
                     <a href="pokemon.php?name=<?= urlencode($p['evolution']) ?>">
                         <?= htmlspecialchars($p['evolution']) ?>
-                        <img src="../public/img/pokemon/<?= urlencode($p['evolution']) ?>.png" wide="50" height="50" alt="<?= htmlspecialchars($p['evolution']) ?>">
+                        <img src="../public/img/pokemon/<?= urlencode($p['evolution']) ?>.png" width="50" height="50" alt="<?= htmlspecialchars($p['evolution']) ?>">
                     </a>
                 <?php else: ?>
                     No evolution
@@ -22,7 +22,7 @@
             </li>
         <?php endforeach; ?>
     </ul>
-<!-- Display STATS -->
+    <!-- Display STATS -->
     <p>HP: <?= isset($pokemon[0]['hp']) ? htmlspecialchars($pokemon[0]['hp']) : 'N/A' ?></p>
     <p>Attack: <?= isset($pokemon[0]['attack']) ? htmlspecialchars($pokemon[0]['attack']) : 'N/A' ?></p>
     <p>Defense: <?= isset($pokemon[0]['defense']) ? htmlspecialchars($pokemon[0]['defense']) : 'N/A' ?></p>
