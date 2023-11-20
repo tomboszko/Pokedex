@@ -28,7 +28,7 @@
             <!-- Check if the evolution data is available -->
             <?php if (isset($p['evolution'])): ?>
                 <!-- Link to the evolution's details page -->
-                <a href="/Pokedex/index.php/pokemon?name=<?= urlencode($p['evolution']) ?>">
+                <a href="/Pokedex/index.php/pokemon?name=<?= urlencode($p['evolution']) ?>"> <!--main issue-->
                     <!-- Display the evolution's name and image -->
                     <?= htmlspecialchars($p['evolution']) ?>
                     <img src="../public/img/pokemon/<?= urlencode($p['evolution']) ?>.png" wide="50" height="50" alt="<?= htmlspecialchars($p['evolution']) ?>">
