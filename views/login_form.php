@@ -6,7 +6,7 @@ require __DIR__ . '/partials/header.php';
 
 
 
-    <h2>Formulaire de Connexion</h2>
+    <h2 class="font-bold flex flex-col items-center mt-2 mb-2">Formulaire de Connexion</h2>
 
     <?php
     // Display an error message if the error parameter is set
@@ -15,14 +15,14 @@ require __DIR__ . '/partials/header.php';
     }
     ?>
 
-    <form method="POST" action="/Pokedex/index.php/login">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+    <form class="leading-10 flex flex-col items-center" method="POST" action="/Pokedex/index.php/login">
+        <label class=" mb-2 font-bold" for="username">Username:</label>
+        <input class="border-2 mb-3" type="text" id="username" name="username">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <label class=" mb-2 font-bold" for="password">Password:</label>
+        <input class="border-2 mb-3" type="password" id="password" name="password">
 
-        <input type="submit" value="Login">
+        <input class="leading-6 text-black font-bold " type="submit" value="Login">
     </form>
 
     <h2>Inscription :</h2>
