@@ -50,6 +50,17 @@ switch ($url['path']) {
             require 'views/registration_form.php';
         }
         break;
+    case '/Pokedex/index.php/addpokemon':
+        // Check if the HTTP method is GET
+        if ($method == 'POST') {
+            // Include the 'controllers/newpoke.php' file for the registration form
+            require 'controllers/newpoke.php';
+            addpokemon($pdo);
+        }
+        elseif ($method == 'GET') {
+            require 'views/addpokemon.php';
+        }
+        break;
 
 // Case: Handle other paths
 case '/Pokedex/index.php/pokemon':
