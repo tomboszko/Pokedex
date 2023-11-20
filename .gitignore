@@ -1,2 +1,3 @@
 # pour le fichier contenant le login et le mot de passe de la db
 helpers/log.php
+.htaccess
