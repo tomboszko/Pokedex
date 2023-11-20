@@ -1,13 +1,10 @@
 <!-- login_form.php -->
+<?php 
+$title = "Connexion";
+require __DIR__ . '/partials/header.php';
+?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-</head>
-<body>
+
 
     <h2>Formulaire de Connexion</h2>
 
@@ -30,7 +27,8 @@
 
     <h2>Inscription :</h2>
     <a href="/Pokedex/index.php/register">Register</a>
-</body>
-</html>
 
+<?php
+require_once __DIR__ . '/partials/footer.php';
+?>
 

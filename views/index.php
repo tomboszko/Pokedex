@@ -2,13 +2,12 @@
 session_start();
 
 $title = "Home";
-require_once __DIR__ . '/partials/header.php';
+require __DIR__ . '/partials/header.php';
 ?>
 
 <main class="w-full">
     <h1>Pokedex - Homepage</h1>
-    <p>Hello <strong><?php echo $_SESSION['user']['user']  ?></p></strong>
-    <div>
+    <div class="flex flex-wrap gap-8 justify-center p-10">
         <?php foreach ($pokemons as $key => $pokemon) { ?>
             <div class="flex gap-2 flex-col items-center border-2 w-1/6 p-6">
                 <div class= ><img src="<?= "public/img/pokemon/{$pokemon['nom']}.png"?>" width="100" height="100" alt="image of the pokemon"></div>

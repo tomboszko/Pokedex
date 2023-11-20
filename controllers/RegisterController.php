@@ -1,7 +1,7 @@
 <?php
 // In RegisterController.php
 
-function register($pdo) {
+function registerOtherName($pdo) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get the username and password from the POST data
         $username = $_POST['username'];
