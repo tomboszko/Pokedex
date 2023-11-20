@@ -4,7 +4,7 @@ session_start();
 $title = "Home";
 
 // Include the header file
-require_once __DIR__ . '/partials/header.php';
+require __DIR__ . '/partials/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,12 +19,12 @@ require_once __DIR__ . '/partials/header.php';
     
 </body>
 </html>
+
 <main class="w-full">
     <h1>Pokedex - Homepage</h1>
     <!-- Display a welcome message with the user's name -->
     <p>Hello <strong><?php echo $user['name'] ?></p></strong>
-    <p>Hello <strong><?php echo $_SESSION['user']['user']  ?></p></strong>
-    <div>
+    <div class="flex flex-wrap gap-8 justify-center p-10">
         <!-- Loop through each Pokémon and display its details -->
         <?php foreach ($pokemons as $key => $pokemon) { ?>
             <div>
@@ -60,6 +60,8 @@ require_once __DIR__ . '/partials/header.php';
         <?php } ?>
     </div>
 </main>
+
+
 
 <!-- Include the footer file -->
 <?php
