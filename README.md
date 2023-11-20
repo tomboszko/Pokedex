@@ -15,11 +15,20 @@ Welcome to the Pokédex Project, a comprehensive and interactive digital encyclo
 ## Challenge 
 
 PHP Procedural Programming: Develop proficiency in PHP procedural programming by building a functional Pokedex application.
+
 Database Integration: Learn to interact with a database to store and retrieve user information, favorite Pokemon, and Pokemon details.
+
 User Authentication: Implement a secure login and registration system to allow users to save their favorite Pokemon.
+
 Dynamic Web Pages: Understand how to create dynamic web pages that display a list of Pokemon and their details based on user interactions.
 
 ## Main goal: learn about VMC
+
+The primary objective of this project is to provide a hands-on learning experience about VMC:
+
+**View, Model, Controller architecture** a crucial aspect of modern web development. 
+
+By participating in this project, team members will gain practical experience in implementing VMC, enhancing their skills in creating well-structured, efficient, and scalable web applications.
 
 to be continued...
 
