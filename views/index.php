@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $title = "Home";
 require_once __DIR__ . '/partials/header.php';
 ?>
@@ -15,26 +17,18 @@ require_once __DIR__ . '/partials/header.php';
     
 </body>
 </html>
-<main>
+<main class="w-full">
     <h1>Pokedex - Homepage</h1>
-    <p>Hello <strong><?php echo $user['name'] ?></p></strong>
+    <p>Hello <strong><?php echo $_SESSION['user']['user']  ?></p></strong>
     <div>
         <?php foreach ($pokemons as $key => $pokemon) { ?>
-            <div>
-                <div>
-                    <a href="/Pokedex/index.php/pokemon?name=<?= $pokemon['nom'] ?>">
-                        <img src="<?= "public/img/pokemon/{$pokemon['nom']}.png"?>" alt="image of the pokemon">
-                    </a>
-                </div>
+            <div class="flex gap-2 flex-col items-center border-2 w-1/6 p-6">
+                <div class= ><img src="<?= "public/img/pokemon/{$pokemon['nom']}.png"?>" width="100" height="100" alt="image of the pokemon"></div>
                 <div><?= $pokemon['number'] ?></div>
-                <div>
-                    <a href="/Pokedex/index.php/pokemon?name=<?= $pokemon['nom'] ?>">
-                        <?= $pokemon['nom']?>
-                    </a>
-                </div>
-                <div>
-                    <div><img src="public/img/types/<?= $pokemons[$key]['type1']?>.png" alt="type en couleur"></div>
-                    <div><?php if ($pokemons[$key]['type2'] != 'NULL') : ?><img src="public/img/types/<?= $pokemons[$key]['type2']?>.png" alt="type en couleur"><?php else  : echo ''; endif ?></div>
+                <div class="font-bold"><?= $pokemon['nom']?></div>
+                <div class="flex gap-4">
+                    <div><img class="w-24" src="public/img/types/<?= $pokemons[$key]['type1']?>.png" alt="type en couleur"></div>
+                    <div <?php if ($pokemons[$key]['type2'] == 'NULL') { echo 'class="hidden"';}?> ><img class="w-24" src="public/img/types/<?php echo $pokemons[$key]['type2']; ?>.png" alt="type en couleur"></div>
                 </div>
             </div>
         <?php } ?>

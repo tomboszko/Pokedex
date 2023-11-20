@@ -28,6 +28,8 @@
         <input type="submit" value="Login">
     </form>
 
+    <h2>Inscription :</h2>
+    <a href="/Pokedex/index.php/register">Register</a>
 </body>
 </html>
 

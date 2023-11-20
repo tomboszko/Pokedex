@@ -533,3 +533,51 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}

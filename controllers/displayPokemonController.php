@@ -9,7 +9,7 @@ function show($name, $db) {
     if ($pokemon) {
         include 'views/show.php'; // Display the details in a separate view file
     } else {
-        echo "Pokemon not found.";
+        echo "";
     }
 }
 
